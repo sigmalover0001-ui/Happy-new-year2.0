@@ -212,19 +212,22 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        /* Ad Banner Styling */
-        .ad-banner-468x60-container {
-            width: 468px;
-            max-width: 100%;
-            height: 60px;
-            margin: 25px auto 0 auto;
-            overflow: hidden;
-            /* Optional: Add a border/shadow if you want the ad container to stand out visually before the ad loads */
+        /* Ad Banner Container Styling */
+        .ad-banner-container {
+            width: 468px; /* Fixed width for the ad */
+            height: 60px;  /* Fixed height for the ad */
+            max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+            margin: 25px auto 0 auto; /* Center the ad and add top margin */
+            display: flex; /* Use flexbox to center iframe if needed */
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Hide any overflow from the ad creative */
+            /* Optional: Add a border or background for visibility before ad loads */
+            /* background-color: #1a1a1a; */
             /* border: 2px solid #FFD700; */
             /* border-radius: 8px; */
             /* box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); */
         }
-
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
@@ -294,6 +297,10 @@
                 width: 100%;
                 max-width: 250px;
             }
+            .ad-banner-container {
+                width: 320px; /* Adjust ad width for smaller screens if needed */
+                height: 50px; /* Adjust ad height for smaller screens if needed */
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -317,8 +324,9 @@
 
         <div id="greeting-message"></div>
 
-        <!-- Adsterra Ad Banner 468x60 -->
-        <div class="ad-banner-468x60-container">
+        <!-- Adsterra Ad Banner Container -->
+        <div class="ad-banner-container">
+            <!-- Adsterra Ad Code -->
             <script type="text/javascript">
                 atOptions = {
                     'key' : 'e1d8bc4624d14fb51fefc31dea8d7f86',
