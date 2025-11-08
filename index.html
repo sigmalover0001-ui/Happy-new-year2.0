@@ -1,0 +1,467 @@
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2060cd326a8534864719a297f6201ceb',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/2060cd326a8534864719a297f6201ceb/invoke.js"></script>
+
+
+Is ad code ko isme sahi jagah lagakar updated code do
+
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नया साल मुबारक हो!</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Firecracker Container */
+        .fireworks-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .firework {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 0 5px white, 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: firework-launch 1.5s ease-out forwards;
+            opacity: 0;
+            filter: blur(0.5px);
+        }
+
+        @keyframes firework-launch {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            20% { opacity: 1; }
+            80% { transform: translateY(30vh) scale(1); opacity: 1; }
+            100% { transform: translateY(0vh) scale(0); opacity: 0; }
+        }
+
+        .explosion-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            opacity: 0;
+            animation: firework-particle-fade 0.8s ease-out forwards;
+            background: radial-gradient(circle, #fff 20%, transparent 80%);
+            box-shadow: 0 0 5px currentColor;
+        }
+
+        @keyframes firework-particle-fade {
+            0% { transform: scale(0.5); opacity: 1; }
+            100% { transform: scale(1.8); opacity: 0; }
+        }
+
+        .content {
+            z-index: 10;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.88);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.8), inset 0 0 18px rgba(255, 255, 255, 0.4);
+            max-width: 90%;
+            box-sizing: border-box;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .content:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.8em;
+            margin-bottom: 30px;
+            color: #FFD700;
+            text-shadow: 5px 5px 12px rgba(0, 0, 0, 1), 0 0 20px #FFEA00;
+            letter-spacing: 3px;
+        }
+
+        img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 5px solid #00BFFF;
+            box-shadow: 0 0 25px rgba(0, 191, 255, 0.9), inset 0 0 12px rgba(0, 191, 255, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        /* Container for Name Input and Share Button */
+        .name-share-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 35px;
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+            flex-wrap: wrap;
+        }
+
+        .name-input-container {
+            flex-grow: 1;
+            background: linear-gradient(135deg, #ff6b6b, #ffe66d);
+            padding: 18px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.4);
+            border: 2px solid #ff4757;
+            max-width: calc(100% - 100px);
+        }
+
+        .name-input-container label {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.4em;
+            color: #fff;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .name-input-container input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #dcdcdc;
+            border-radius: 8px;
+            font-size: 1.3em;
+            text-align: center;
+            background-color: #ffffff;
+            color: #333;
+            outline: none;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        .name-input-container input:focus {
+            border-color: #ff9f43;
+            box-shadow: 0 0 12px rgba(255, 159, 67, 0.7);
+            background-color: #fff;
+        }
+
+        #greeting-message {
+            margin-top: 30px;
+            font-size: 1.8em;
+            color: #90ee90;
+            min-height: 50px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .share-button-container {
+            position: relative;
+        }
+
+        button#shareButton {
+            background: linear-gradient(45deg, #28a745, #218838);
+            color: white;
+            padding: 16px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.2);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        button#shareButton::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+
+        button#shareButton:hover::before {
+            left: 100%;
+        }
+
+        button#shareButton:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.3);
+            background: linear-gradient(45deg, #218838, #1e7e34);
+        }
+        button#shareButton:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Ad Banner Styling */
+        .ad-banner-468x60 {
+            width: 468px;
+            max-width: 100%;
+            height: 60px;
+            background-color: #1a1a1a;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 25px auto 0 auto;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .ad-banner-468x60 span {
+            color: #FFD700;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.2em;
+            }
+            .content {
+                padding: 30px;
+            }
+            img {
+                width: 200px;
+                height: 200px;
+            }
+            .name-input-container {
+                max-width: calc(100% - 90px);
+            }
+            .name-input-container input {
+                font-size: 1.2em;
+            }
+            button#shareButton {
+                padding: 14px 20px;
+                font-size: 1.1em;
+            }
+            #greeting-message {
+                font-size: 1.6em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.8em;
+                margin-bottom: 25px;
+            }
+            .content {
+                padding: 25px;
+                border-radius: 15px;
+            }
+            img {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 25px;
+            }
+            .name-share-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .name-input-container {
+                padding: 15px;
+                max-width: 100%;
+            }
+            .name-input-container label {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+            }
+            .name-input-container input {
+                padding: 12px;
+                font-size: 1.1em;
+            }
+            #greeting-message {
+                font-size: 1.4em;
+                min-height: 40px;
+                margin-top: 25px;
+            }
+            button#shareButton {
+                padding: 14px 30px;
+                font-size: 1.2em;
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fireworks-container"></div>
+
+    <div class="content">
+        <h1>नया साल मुबारक हो!</h1>
+        <img src="https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif" alt="Happy New Year GIF">
+        
+        <div class="name-share-row">
+            <div class="name-input-container">
+                <label for="nameInput">अपना नाम लिखें</label>
+                <input type="text" id="nameInput" placeholder="आपका नाम">
+            </div>
+            <div class="share-button-container">
+                <button id="shareButton">शेयर करें</button>
+            </div>
+        </div>
+
+        <div id="greeting-message"></div>
+        
+        <!-- Ad Banner 468x60 -->
+        <div class="ad-banner-468x60">
+            <span>468x60 विज्ञापन स्थान - यहाँ अपना ad code लगाएं</span>
+            <!-- अपना ad code यहाँ paste करें -->
+        </div>
+    </div>
+
+    <script>
+        const nameInput = document.getElementById('nameInput');
+        const greetingMessage = document.getElementById('greeting-message');
+        const shareButton = document.getElementById('shareButton');
+        const fireworksContainer = document.querySelector('.fireworks-container');
+
+        function createExplosion(x, y, color) {
+            const numParticles = 40 + Math.floor(Math.random() * 30);
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('explosion-particle');
+                particle.style.left = `${x}px`;
+                particle.style.top = `${y}px`;
+                particle.style.backgroundColor = color;
+                particle.style.color = color;
+
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 60 + 40;
+                const duration = Math.random() * 1.5 + 0.8;
+                const endX = x + Math.cos(angle) * speed;
+                const endY = y + Math.sin(angle) * speed;
+
+                particle.animate([
+                    { transform: 'translate(0, 0) scale(0.5)', opacity: 1 },
+                    { transform: `translate(${endX - x}px, ${endY - y}px) scale(1.8)`, opacity: 0 }
+                ], {
+                    duration: duration * 1000,
+                    easing: 'ease-out',
+                    fill: 'forwards'
+                });
+
+                fireworksContainer.appendChild(particle);
+                particle.addEventListener('animationend', () => {
+                    particle.remove();
+                });
+            }
+        }
+
+        function createFireworkAnimation() {
+            const startX = Math.random() * window.innerWidth;
+            const startY = window.innerHeight;
+            const endY = window.innerHeight * (0.15 + Math.random() * 0.45);
+
+            const fireworkTrail = document.createElement('div');
+            fireworkTrail.classList.add('firework');
+            fireworkTrail.style.left = `${startX}px`;
+            fireworkTrail.style.top = `${startY}px`;
+            fireworksContainer.appendChild(fireworkTrail);
+
+            const colors = [
+                '#FFD700', '#FF4500', '#DA70D6', '#00FF7F', '#1E90FF', '#FF69B4',
+                '#FFFF00', '#ADFF2F', '#87CEEB', '#FF1493', '#F0E68C', '#ADD8E6'
+            ];
+            const explosionColor = colors[Math.floor(Math.random() * colors.length)];
+
+            fireworkTrail.animate([
+                { transform: `translateY(0)`, opacity: 0 },
+                { transform: `translateY(-${startY - endY}px)`, opacity: 1, offset: 0.8 },
+                { opacity: 0, transform: `translateY(-${startY - endY}px)` }
+            ], {
+                duration: 2500 + Math.random() * 1500,
+                easing: 'ease-out',
+                fill: 'forwards'
+            }).onfinish = () => {
+                fireworkTrail.remove();
+                createExplosion(startX, endY, explosionColor);
+            };
+        }
+
+        setInterval(createFireworkAnimation, 300 + Math.random() * 300);
+
+        nameInput.addEventListener('input', () => {
+            const name = nameInput.value.trim();
+            if (name) {
+                greetingMessage.textContent = `${name} की तरफ से नया साल की हार्दिक शुभकामनायें`;
+            } else {
+                greetingMessage.textContent = '';
+            }
+        });
+
+        shareButton.addEventListener('click', () => {
+            const name = nameInput.value.trim();
+            let shareTitle = "नया साल मुबारक हो!";
+            let shareText = "आपको नया साल मुबारक हो!";
+            if (name) {
+                shareText = `${name} की तरफ से नया साल की हार्दिक शुभकामनायें! 🎉`;
+            }
+            const shareUrl = window.location.href;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: shareTitle,
+                    text: shareText,
+                    url: shareUrl,
+                })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+            } else {
+                const fallbackMessage = `${shareText}\n${shareUrl}`;
+
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(fallbackMessage).then(() => {
+                        alert("संदेश कॉपी कर लिया गया है। आप इसे किसी भी ऐप पर पेस्ट कर सकते हैं।");
+                        window.open(`https://wa.me/?text=${encodeURIComponent(shareText + "\n" + shareUrl)}`, '_blank');
+                    }).catch(err => {
+                        console.error('Could not copy text: ', err);
+                        alert("यह शेयर सुविधा आपके ब्राउज़र में उपलब्ध नहीं है। कृपया मैन्युअल रूप से लिंक कॉपी करें: " + shareUrl);
+                        window.open(`https://wa.me/?text=${encodeURIComponent(shareText + "\n" + shareUrl)}`, '_blank');
+                    });
+                } else {
+                    alert("यह शेयर सुविधा आपके ब्राउज़र में उपलब्ध नहीं है। कृपया मैन्युअल रूप से लिंक कॉपी करें: " + shareUrl);
+                    window.open(`https://wa.me/?text=${encodeURIComponent(shareText + "\n" + shareUrl)}`, '_blank');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
